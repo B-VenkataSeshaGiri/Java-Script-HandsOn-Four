@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandsOn Four</title>
+    <style>
+        h3
+        {
+            color: red;
+        }
+        h4
+        {
+            color: blue;
+        }
+        h1
+        {
+            color: greenyellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>HandsOn On Arrays</h1>
+    <h3>Q1)Find the Product.</h3>
+    <h4>Sol: <br>
+     <pre>
+        let product=1;
+        for(let i=0;i < array.length; i++)
+        {
+          product=product * array[i];
+        }
+        return product;   
+    </pre></h4>
+    <h3>Q2)Find the Sum.</h3>
+    <h4>Sol: <br> <pre>
+        var sum=0;
+        for(let i=0;i < N;i++)
+        {
+          sum=sum + array[i];
+        }
+        return sum;
+    </pre></h4> 
+    <h3>Q3)Count Occurrences</h3>
+    <h4>Sol: <br> 
+    <pre> 
+        let count=0;
+        for(let i=0;i < N;i++)
+        {
+          if(K==Arr[i])
+          {
+            count++;
+          }
+        }
+        return count;
+    </pre></h4>
+    <h3>Q4)Even Odd</h3>
+    <h4>Sol: <br> <pre>
+        let sum_of_even=0;
+        let sum_of_odd=0;
+        for(let i=0;i < Arr.length;i++)
+        {
+          if(Arr[i]%2==0)
+          {
+            sum_of_even=sum_of_even+Arr[i];
+          }
+          else
+          {
+            sum_of_odd=sum_of_odd+Arr[i];
+          }
+        }
+        B=[];
+        B[0]=sum_of_even;
+        B[1]=sum_of_odd;
+        return B;
+    </pre></h4>
+    <h3>Q5)Find whether the number is present or not</h3>
+    <h4>Sol: <br> <pre>const Find_Num = (array,N,M) => 
+        {
+          for(let i=0;i < N;i++)
+          {
+            if(M===array[i])
+            {
+              return "YES";
+            }
+          }
+          return "NO";
+        };</pre></h4>
+        <h3>Q6)Higher Age</h3>
+    <h4>Sol: <br> <pre>const highAge = (N, Arr) => 
+        {
+            for(var i=0;i<N;i++)
+            {
+              if(Arr[i]>=18)
+              {
+                return Arr[i];
+              }
+            }
+        };</pre></h4>
+        <h3>Q7)Increment the Array Elements</h3>
+    <h4>Sol: <br> <pre>
+        const Inc_Arr = (array,N) => 
+        {
+          let result="";
+          for(let i=0;i < N;i++)
+          {
+            array[i]=array[i]+1;
+          }
+          for(let i=0;i < N;i++)
+          {
+            result=result+array[i]+ ' ';
+          }
+          console.log(result);
+        };
+    </pre></h4>
+    <h3>Q8)Pass or Fail</h3>
+    <h4>Sol: <br> <pre>
+        const isAllPass = (N, Arr) => 
+        {
+            for(let i=0;i < N;i++)
+            {
+              if(Arr[i] < 32)
+              {
+                return "NO";
+              }
+            }
+            return "YES";
+        };
+    </pre></h4>
+    <h3>Q9)Unique Color Shirt</h3>
+    <h4>Sol: <br> <pre>
+        function Unique_Shirts (arr,N)
+        {
+        let frequency=[];
+        for(let i=0;i < 1001;i++)
+        {
+          frequency[i]=0;
+        }
+        for(let i=0;i < N;i++)
+        {
+          frequency[arr[i]]++;
+        }
+        let result=0;
+        for(let i=0;i < 1001;i++)
+        {
+          if(frequency[i] == 1)
+          {
+            result++;
+          }
+        }
+        return result;
+        }
+    </pre></h4>
+    <h3>Q10)Min and Max</h3>
+    <h4>Sol: <br> <pre>
+        function arrayMin(arr) {
+            var min = arr[0];
+            for(let i=0;i< arr.length;i++)
+            if(min > arr[i+1]){
+              min = arr[i+1];
+            }
+          return min;
+          }
+          
+          function arrayMax(arr) {
+             var max = arr[0];
+            for(let j=0;j< arr.length;j++)
+            if(max < arr[j+1]){
+              max = arr[j+1];
+            }
+          return max;
+          }
+    </pre></h4> 
+    <h3>Q11)Birthday Game</h3>
+    <h4>Sol: <br> <pre>function Birthday_Game(arr,D ,M)
+    {
+        var ways=0;
+         for(let i=0; i < arr.length-M+1; i++){
+           let sum=0;
+           for(let j=i; j < M+i; j++){
+             sum+=arr[j];
+           }
+           if (sum === D){
+             ways++;
+           }
+         }
+        return ways;
+    }
+</pre></h4>
+</body>
+</html>
+    <!-- <h3>Q)</h3>
+    <h4>Sol: <br> <pre></pre></h4> -->
